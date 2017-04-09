@@ -12,10 +12,11 @@ Installation
 ---
 
 ```
-docker run -d --restart=always -v /path/to/your/library:/media/library --name googlemusicmanager jaymoulin/rpi-google-musicmanager
+docker run -d --restart=always -v /path/to/your/upload/library:/media/library/upload -v /path/to/your/download/library:/media/library/download --name googlemusicmanager jaymoulin/rpi-google-musicmanager
 ```
 
-You must define your path to your library in a volume to `/media/library`
+You must define your path to your upload library in a volume to `/media/library/upload`
+You must define your path to your download library in a volume to `/media/library/download`
 
 You can also mount a folder to `/root/oauth` to keep or reuse your key
 

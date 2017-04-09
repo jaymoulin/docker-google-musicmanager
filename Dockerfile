@@ -15,7 +15,8 @@ RUN chmod +x /root/download.py
 RUN chmod +x /root/daemon.sh
 RUN chmod +x /root/auth.py
 
-VOLUME /media/library
+VOLUME /media/library/upload
+VOLUME /media/library/download
 VOLUME /root/oauth
 
 WORKDIR /root
