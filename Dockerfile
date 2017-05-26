@@ -20,4 +20,5 @@ VOLUME /media/library/download
 VOLUME /root/oauth
 
 WORKDIR /root
+ENV PATH="/root:${PATH}"
 CMD ["/root/daemon.sh"]
