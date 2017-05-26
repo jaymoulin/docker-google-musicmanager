@@ -9,9 +9,9 @@ if [ ! -f /root/oauth/oauth.key ]; then
     done
 else
     trap 'kill -TERM $PIDU;kill -TERM $PIDD' TERM INT
-    /root/upload.py /media/library/upload /root/oauth/oauth.key &
+    python3 /root/upload.py /media/library/upload /root/oauth/oauth.key &
     PIDU=$!
-    /root/download.py /media/library/download /root/oauth/oauth.key &
+    python3 /root/download.py /media/library/download /root/oauth/oauth.key &
     PIDD=$!
     wait $PIDD
     wait $PIDD
