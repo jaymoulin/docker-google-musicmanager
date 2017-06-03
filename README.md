@@ -5,8 +5,8 @@ Raspberry PI - Google Music Manager - Docker Image
 
 [![latest release](https://img.shields.io/github/release/jaymoulin/docker-rpi-google-musicmanager.svg "latest release")](http://github.com/jaymoulin/docker-rpi-google-musicmanager/releases)
 
-
-This image allows you to download and upload your Google Music Library to/from a selected folder
+This image allows you to download and upload your Google Music Library to/from a selected folder.
+This image is based on [Google MusicManager](https://github.com/jaymoulin/google-music-manager)
 
 Installation
 ---
