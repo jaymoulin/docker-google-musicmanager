@@ -1,9 +1,9 @@
-FROM jaymoulin/rpi-python:3.6.1 
+FROM jaymoulin/rpi-python:alpine 
 
 MAINTAINER Jay MOULIN <jaymoulin@gmail.com>
 
-RUN apt-get update && apt-get install libav-tools build-essential -y && mkdir /root/oauth/ && \
-    pip3 install watchdog gmusicapi bs4 && apt-get clean && apt-get autoremove -y
+RUN apk update && apk add ffmpeg g++ && mkdir /root/oauth/ && \
+    pip3 install watchdog gmusicapi bs4
 
 ADD ./daemon.sh /root/daemon.sh
 ADD ./google-music-manager/uploader-daemon.py /root/upload.py
