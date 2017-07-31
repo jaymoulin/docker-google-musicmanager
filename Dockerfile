@@ -2,18 +2,19 @@ FROM jaymoulin/rpi-python:alpine
 
 MAINTAINER Jay MOULIN <jaymoulin@gmail.com>
 
-RUN apk update && apk add ffmpeg g++ && mkdir /root/oauth/ && \
-    pip3 install watchdog gmusicapi bs4
+RUN apk update && \
+	apk add git --no-cache --virtual .build-deps && \
+	git clone http://github.com/jaymoulin/google-music-manager.git /root/manager && \
+	apk add ffmpeg g++ && mkdir /root/oauth/ && \
+    pip3 install watchdog gmusicapi bs4 && \
+	apk del git --purge .build-deps
 
 ADD ./daemon.sh /root/daemon.sh
-ADD ./google-music-manager/uploader-daemon.py /root/upload.py
-ADD ./google-music-manager/download.py /root/download.py
-ADD ./google-music-manager/auth.py /root/auth.py
 ADD ./auth.sh /root/auth
-RUN chmod +x /root/upload.py
-RUN chmod +x /root/download.py
+RUN chmod +x /root/manager/uploader-daemon.py
+RUN chmod +x /root/manager/download.py
 RUN chmod +x /root/daemon.sh
-RUN chmod +x /root/auth.py
+RUN chmod +x /root/manager/auth.py
 
 VOLUME /media/library/upload
 VOLUME /media/library/download
