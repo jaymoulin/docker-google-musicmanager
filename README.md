@@ -8,6 +8,8 @@ Raspberry PI - Google Music Manager - Docker Image
 [![Docker stars](https://img.shields.io/docker/stars/jaymoulin/rpi-google-musicmanager.svg)](https://hub.docker.com/r/jaymoulin/rpi-google-musicmanager/)
 [![Bitcoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/btc.png "Bitcoin donation")](https://m.freewallet.org/id/374ad82e/btc)
 [![Litecoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ltc.png "Litecoin donation")](https://m.freewallet.org/id/374ad82e/ltc)
+[![PayPal donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ppl.png "PayPal donation")](https://www.paypal.me/jaymoulin)
+[![Beerpay donation](https://beerpay.io/jaymoulin/docker-rpi-google-musicmanager/badge.svg "Beerpay donation")](https://beerpay.io/jaymoulin/docker-rpi-google-musicmanager)
 
 This image allows you to download and upload your Google Music Library to/from a selected folder.
 This image is based on [Google MusicManager](https://github.com/jaymoulin/google-music-manager)
