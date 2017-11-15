@@ -35,7 +35,15 @@ These environment variable will produce a different behaviour
 
 * `REMOVE` : Remove file on successful upload (boolean, (default: true)) - pass to false if you want to keep files 
 * `UPLOADER_ID` : Identity of your uploader, must be your MAC address in uppercase 
-    (default: false, which means your actual MAC address) - Change this value only if you know what you are doing and had `MAX_PER_MACHINE_USERS_EXCEEDED` error  
+    (default: false, which means your actual MAC address) - Change this value only if you know what you are doing and had `MAX_PER_MACHINE_USERS_EXCEEDED` error
+
+### Example
+
+```
+docker run -d --restart=always -v /path/to/your/upload/library:/media/library/upload -v /path/to/your/download/library:/media/library/download -e REMOVE=false --name googlemusicmanager jaymoulin/rpi-google-musicmanager
+```
+
+will not delete files after successful upload
 
 Configuration
 ---
