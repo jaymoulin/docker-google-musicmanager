@@ -1,0 +1,29 @@
+image: jaymoulin/google-musicmanager:$FULLVERSION
+manifests:
+  -
+    image: jaymoulin/google-musicmanager:$VERSION-arm32v6
+    platform:
+      architecture: arm
+      variant: v6
+      os: linux
+  -
+    image: jaymoulin/google-musicmanager:$VERSION-arm64v8
+    platform:
+      architecture: arm
+      variant: v8
+      os: linux
+  -
+    image: jaymoulin/google-musicmanager:$VERSION-amd64
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: jaymoulin/google-musicmanager:$VERSION-i386
+    platform:
+      architecture: 386
+      os: linux
+  -
+    image: jaymoulin/google-musicmanager:$VERSION-s390x
+    platform:
+      architecture: s390x
+      os: linux

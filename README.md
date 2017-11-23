@@ -1,15 +1,14 @@
 ![logo](logo.png)
 
-Raspberry PI - Google Music Manager - Docker Image
-==================================================
+Google Music Manager - Docker Image (Multiarch)
+===============================================
 
-[![latest release](https://img.shields.io/github/release/jaymoulin/docker-rpi-google-musicmanager.svg "latest release")](http://github.com/jaymoulin/docker-rpi-google-musicmanager/releases)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jaymoulin/rpi-google-musicmanager.svg)](https://hub.docker.com/r/jaymoulin/rpi-google-musicmanager/)
-[![Docker stars](https://img.shields.io/docker/stars/jaymoulin/rpi-google-musicmanager.svg)](https://hub.docker.com/r/jaymoulin/rpi-google-musicmanager/)
+[![latest release](https://img.shields.io/github/release/jaymoulin/docker-google-musicmanager.svg "latest release")](http://github.com/jaymoulin/docker-google-musicmanager/releases)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jaymoulin/google-musicmanager.svg)](https://hub.docker.com/r/jaymoulin/google-musicmanager/)
+[![Docker stars](https://img.shields.io/docker/stars/jaymoulin/google-musicmanager.svg)](https://hub.docker.com/r/jaymoulin/google-musicmanager/)
 [![Bitcoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/btc.png "Bitcoin donation")](https://m.freewallet.org/id/374ad82e/btc)
 [![Litecoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ltc.png "Litecoin donation")](https://m.freewallet.org/id/374ad82e/ltc)
 [![PayPal donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ppl.png "PayPal donation")](https://www.paypal.me/jaymoulin)
-[![Beerpay donation](https://beerpay.io/jaymoulin/docker-rpi-google-musicmanager/badge.svg "Beerpay donation")](https://beerpay.io/jaymoulin/docker-rpi-google-musicmanager)
 
 This image allows you to download and upload your Google Music Library to/from a selected folder.
 This image is based on [Google MusicManager](https://github.com/jaymoulin/google-music-manager)
@@ -18,7 +17,7 @@ Installation
 ---
 
 ```
-docker run -d --restart=always -v /path/to/your/upload/library:/media/library/upload -v /path/to/your/download/library:/media/library/download --name googlemusicmanager jaymoulin/rpi-google-musicmanager
+docker run -d --restart=always -v /path/to/your/upload/library:/media/library/upload -v /path/to/your/download/library:/media/library/download --name googlemusicmanager jaymoulin/google-musicmanager
 ```
 
 You must define your path to your upload library in a volume to `/media/library/upload`
@@ -69,7 +68,7 @@ docker restart googlemusicmanager
 Appendixes
 ---
 
-### Install RaspberryPi Docker
+### Install Docker
 
 If you don't have Docker installed yet, you can do it easily in one line using this command
  
