@@ -15,7 +15,7 @@ manifests:
   -
     image: jaymoulin/google-musicmanager:$VERSION-amd64
     platform:
-      architecture: arm64
+      architecture: amd64
       os: linux
   -
     image: jaymoulin/google-musicmanager:$VERSION-i386
