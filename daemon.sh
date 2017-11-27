@@ -9,14 +9,14 @@ if [ ! -f /root/oauth/oauth.key ]; then
     done
 else
     trap 'kill -TERM $PIDU;kill -TERM $PIDD' TERM INT
-    PARAMS = ''
-    if [[ "$REMOVE" ]]; then
+    PARAMS=''
+    if [ "$REMOVE" ]; then
         PARAMS="-r"
     fi
-    if [[ "$UPLOADER_ID" ]]; then
+    if [ "$UPLOADER_ID" ]; then
         PARAMS="$PARAMS --uploader_id $UPLOADER_ID"
     fi
-    `google-music-upload -d /media/library -a /root/oauth/oauth.key $PARAMS &`
+    google-music-upload -d /media/library -a /root/oauth/oauth.key $PARAMS &
     PIDU=$!
     google-music-download -d /media/library/download -a /root/oauth/oauth.key &
     PIDD=$!
