@@ -16,6 +16,7 @@ RUN apk update && \
     apk del g++ --purge .build-deps
 
 COPY ./daemon.sh /root/daemon
+COPY ./auth.sh /root/auth
 
 VOLUME /media/library/upload
 VOLUME /media/library/download
