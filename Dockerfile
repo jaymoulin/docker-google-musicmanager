@@ -10,9 +10,10 @@ ENV REMOVE=0
 ENV UPLOADER_ID=false
 
 RUN apk update && \
-    apk add linux-headers g++ --no-cache --virtual .build-deps && \
+    apk add linux-headers g++ libxslt-dev libxml2-dev --no-cache --virtual .build-deps && \
     apk add ffmpeg && mkdir /root/oauth/ && \
-    pip3 install MechanicalSoup==0.8.0 google-music-manager-uploader google-music-manager-downloader && \
+    pip3 install --upgrade pip && \
+    pip3 install google-music-manager-uploader google-music-manager-downloader && \
     apk del g++ --purge .build-deps
 
 COPY ./daemon.sh /root/daemon
