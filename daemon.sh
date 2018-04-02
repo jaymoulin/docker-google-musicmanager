@@ -10,7 +10,7 @@ if [ ! -f /root/oauth/oauth.key ]; then
 else
     trap 'kill -TERM $PIDU;kill -TERM $PIDD' TERM INT
     PARAMS=''
-    if [ "$REMOVE" ]; then
+    if [ "$REMOVE" = "1" || "$REMOVE" = "True" || "$REMOVE" = "true" || "$REMOVE" = "TRUE" ]; then
         PARAMS="-r"
     fi
     if [ "$UPLOADER_ID" ]; then
