@@ -8,6 +8,7 @@ LABEL maintainer="Jay MOULIN <jaymoulin@gmail.com> <https://twitter.com/MoulinJa
 
 ENV REMOVE=0
 ENV UPLOADER_ID=false
+ENV ONESHOT=0
 
 RUN apk update && \
     apk add linux-headers g++ libxslt-dev libxml2-dev --no-cache --virtual .build-deps && \
