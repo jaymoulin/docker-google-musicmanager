@@ -36,6 +36,9 @@ These environment variable will produce a different behaviour
 * `ONESHOT` : Execute only once without listening to folder events (boolean, (default: false)) - pass to true if you want to execute only once (also remove `--restart=always` from docker parameters)  
 * `UPLOADER_ID` : Identity of your uploader, must be your MAC address in uppercase 
     (default: false, which means your actual MAC address) - Change this value only if you know what you are doing and had `MAX_PER_MACHINE_USERS_EXCEEDED` error
+* `DOWNLOAD` : Enable/Disable downloading from Google Music (boolean, (default: true)) - pass false if you do not want to download files
+* `UPLOAD` : Enable/Disable uploading from Google Music (boolean, (default: true)) - pass false if you do not want to upload files
+
 
 ### Example
 

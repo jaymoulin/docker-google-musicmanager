@@ -19,13 +19,22 @@ else
     if [ "$UPLOADER_ID" ]; then
         PARAMS="$PARAMS --uploader_id $UPLOADER_ID"
     fi
-    google-music-upload -d /media/library -a /root/oauth/oauth.key $PARAMS &
-    PIDU=$!
-    google-music-download -d /media/library/download -a /root/oauth/oauth.key &
-    PIDD=$!
-    wait $PIDD
-    wait $PIDD
-    wait $PIDU
-    wait $PIDU
+    if [ "$DOWNLOAD" ]; then
+        google-music-download -d /media/library/download -a /root/oauth/oauth.key &
+        PIDD=$!
+    fi
+    if [ "$UPLOAD" ]; then
+        google-music-upload -d /media/library -a /root/oauth/oauth.key $PARAMS &
+        PIDU=$!
+    fi
+    if [ "$DOWNLOAD" ]; then
+        wait $PIDD
+        wait $PIDD
+    fi
+    if [ "$UPLOAD" ]; then
+        wait $PIDU
+        wait $PIDU
+    fi
+
     EXIT_STATUS=$?
 fi
